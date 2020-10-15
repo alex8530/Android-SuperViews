@@ -37,8 +37,8 @@ and be sure you have material
 
 ## How to use
 
-* First, add  ```xml  android:clipChildren="false" ``` to the parent layout to enable shadow appears 
-  
+* First, add   android:clipChildren="false" ``` to the parent layout to enable shadow appears 
+* your app theme should extent Theme.MaterialComponents theme, Like this :  ```xml <style name="AppTheme" parent="Theme.MaterialComponents.Light"> ``` Or you can add the theme directly to your layout parent like this:   ```xml android:theme="@style/Theme.MaterialComponents.Light" ```
 
 ```xml
     <alex.superbuttonlibrary.SuperButton
