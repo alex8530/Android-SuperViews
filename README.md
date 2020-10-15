@@ -20,21 +20,17 @@ allprojects {
 
 Add library as dependency 
 ```
- implementation 'com.github.alex8530: '
+   implementation 'com.github.alex8530:Android-SuperButton:Tag'
 ```
 and be sure you have material
 ```
- implementation 'com.google.android.material:material:1.0.0'
+ implementation "com.google.android.material:material:1.2.1"
 ```
    
 
 ## How to use
 
- 
-  
-  * Enjoy!
-  
-  
+* First, add  ```xml  android:clipChildren="false" ``` to the parent layout to enable shadow appears 
   
 
 ```xml
@@ -57,6 +53,9 @@ and be sure you have material
         app:alex_strokeColor="@color/colorRed"  />
 ```
 
+  * Enjoy!
+  
+  
 ## License
 
 ```
