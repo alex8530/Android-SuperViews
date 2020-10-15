@@ -1,5 +1,5 @@
 # Android-SuperButton
-SuperButton withapility to set shadow color, corner , stroke width and radius
+SuperButton with apility to set shadow color, corner , stroke width and radius
 
 ![Image Result](https://i.ibb.co/W21YsKS/Screenshot-2020-10-16-022754.png)
 
