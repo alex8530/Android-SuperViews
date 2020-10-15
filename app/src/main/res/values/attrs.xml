@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SuperButton">
+
+        <attr name="alex_fillColor" format="color"/>
+        <attr name="alex_strokeColor" format="color"/>
+        <attr name="alex_strokeWidth" format="dimension"/>
+
+        <attr name="alex_shadowElevation" format="dimension"/>
+        <attr name="alex_shadowColor" format="color"/>
+
+        <attr name="alex_bottomLeftCornerRadius" format="dimension"/>
+        <attr name="alex_bottomRightCornerRadius" format="dimension"/>
+        <attr name="alex_topLeftCornerRadius" format="dimension"/>
+        <attr name="alex_topRightCornerRadius" format="dimension"/>
+
+
+
+        <attr name="alex_bottomLeftCornerFamily" >
+            <flag name="Round" value="0"/>
+            <flag name="Cut" value="1"/>
+        </attr>
+
+        <attr name="alex_bottomRightCornerFamily" >
+            <flag name="Round" value="0"/>
+            <flag name="Cut" value="1"/>
+        </attr>
+
+        <attr name="alex_topLeftCornerFamily" >
+            <flag name="Round" value="0"/>
+            <flag name="Cut" value="1"/>
+        </attr>
+
+        <attr name="alex_topRightCornerFamily" >
+            <flag name="Round" value="0"/>
+            <flag name="Cut" value="1"/>
+        </attr>
+
+
+
+    </declare-styleable>
+
+</resources>
