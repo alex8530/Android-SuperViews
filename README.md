@@ -2,7 +2,7 @@
 SuperButton with apility to set shadow color, corner , stroke width and radius
 
 ![Image Result](https://i.ibb.co/W21YsKS/Screenshot-2020-10-16-022754.png)
-
+ 
 
 ## Getting started
 * In ``` build.gradle ``` (  Project Level  )
@@ -18,7 +18,7 @@ allprojects {
 ```
 * In ``` build.gradle ``` (  app Level  )
 
-Add library as dependency 
+Add library as dependency [![JitPack](https://jitpack.io/v/alex8530/Android-SuperButton.svg)](https://jitpack.io/#alex8530/Android-SuperButton/Tag)
 ```
    implementation 'com.github.alex8530:Android-SuperButton:Tag'
 ```
