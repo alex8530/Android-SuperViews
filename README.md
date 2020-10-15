@@ -1,8 +1,41 @@
 # Android-SuperButton
 SuperButton withapility to set shadow color, corner , stroke width and radius
 
+![Image Result](https://i.ibb.co/W21YsKS/Screenshot-2020-10-16-022754.png)
 
 
+## Getting started
+* In ``` build.gradle ``` (  Project Level  )
+
+Add maven of jitback
+
+ ```
+allprojects { 
+     repositories { 
+        maven { url 'https://jitpack.io' }
+      }
+ }   
+```
+* In ``` build.gradle ``` (  app Level  )
+
+Add library as dependency 
+```
+ implementation 'com.github.alex8530: '
+```
+and be sure you have material
+```
+ implementation 'com.google.android.material:material:1.0.0'
+```
+   
+
+## How to use
+
+ 
+  
+  * Enjoy!
+  
+  
+  
 
 ```xml
     <alex.superbuttonlibrary.SuperButton
