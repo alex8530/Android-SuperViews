@@ -1,5 +1,5 @@
 # Android-SuperButton
-SuperButton with apility to set shadow color, corner , stroke width and radius
+SuperButton, This library able you to add custom button with apility to set shadow color, corner , stroke width and radius of them
 
 ![Image Result](https://i.ibb.co/W21YsKS/Screenshot-2020-10-16-022754.png)
  
@@ -54,7 +54,14 @@ and be sure you have material
 ```
 
   * Enjoy!
-  
+
+
+## What are next ?
+* improve the  <b>CardView</b> and add the possibility of changing these attributes :  
+ - corner form one side only or more, for example from top Left
+ - change the radius of corner
+ - the shadow color
+ - the stroke color and stroke radius  
   
 ## License
 
