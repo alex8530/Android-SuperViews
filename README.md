@@ -60,6 +60,15 @@ and be sure you have material
         app:alex_strokeColor="@color/colorRed"  />
 ```
 
+* And Here, be careful , thrse is no <b>dp</b> here !
+```xml  
+<resources>
+    <dimen name="dimen_30">30</dimen>
+    <dimen name="dimen_15">15</dimen>
+    <dimen name="dimen_5">5</dimen>
+    <dimen name="dimen_2">2</dimen>
+</resources>
+```
   * Enjoy!
 
 
