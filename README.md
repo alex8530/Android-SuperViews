@@ -59,7 +59,7 @@ and be sure you have material
         app:alex_shadowElevation="@dimen/dimen_30"
         app:alex_strokeColor="@color/colorRed"  />
 ```
-
+* create file dimens.xml in values and put in it this code
 * And Here, be careful , thrse is no <b>dp</b> here !
 ```xml  
 <resources>
