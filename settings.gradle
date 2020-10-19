@@ -1,3 +1,2 @@
-include ':SuperButtonlibrary'
+include ':Superlibrary'
 include ':app'
-rootProject.name = "SuperButton"
