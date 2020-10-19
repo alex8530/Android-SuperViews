@@ -1,4 +1,4 @@
-package alex.superbuttonlibrary
+package alex.superlibrary
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -11,7 +11,7 @@ import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.ShapeAppearanceModel
 import com.google.android.material.shape.TriangleEdgeTreatment
-import com.superbuttonlibrary.R
+import com.superlibrary.R
 
 
 @SuppressLint("RestrictedApi")
@@ -29,47 +29,47 @@ class SuperButton @JvmOverloads constructor(
         var OutSide =1
     }
 
-    private var materialShapeDrawable: MaterialShapeDrawable
+    private var materialShapeDrawableSuper: MaterialShapeDrawable
 
-    private var shadowElevation = 0f
-    private var shadowcolor = ContextCompat.getColor(
+    private var shadowElevationSuper = 0f
+    private var shadowColorSuper = ContextCompat.getColor(
         context,
         R.color.colorPrimary
     )
-    private var fillColor = ContextCompat.getColor(
+    private var fillColorSuper = ContextCompat.getColor(
         context,
         R.color.colorPrimary
     )
-    private var strokeColor = ContextCompat.getColor(
+    private var strokeColorSuper = ContextCompat.getColor(
         context,
         R.color.colorPrimary
     )
-    private var strokeWidth = 0f
+    private var strokeWidthSuper = 0f
 
-    private var bottomLeftCornerRadius = 0f
-    private var bottomRightCornerRadius = 0f
-    private var topLeftCornerRadius = 0f
-    private var topRightCornerRadius = 0f
+    private var bottomLeftCornerRadiusSuper = 0f
+    private var bottomRightCornerRadiusSuper = 0f
+    private var topLeftCornerRadiusSuper = 0f
+    private var topRightCornerRadiusSuper = 0f
 
-    private var bottomLeftCornerFamily =
+    private var bottomLeftCornerFamilySuper =
         Round
-    private var bottomRightCornerFamily =
+    private var bottomRightCornerFamilySuper =
         Round
-    private var topLeftCornerFamily =
+    private var topLeftCornerFamilySuper =
         Round
-    private var topRightCornerFamily =
+    private var topRightCornerFamilySuper =
         Round
 
 
-    private var topEdgeRadius = 0f
-    private var bottomEdgeRadius = 0f
-    private var leftEdgeRadius = 0f
-    private var rightEdgeRadius = 0f
+    private var topEdgeRadiusSuper = 0f
+    private var bottomEdgeRadiusSuper = 0f
+    private var leftEdgeRadiusSuper = 0f
+    private var rightEdgeRadiusSuper = 0f
 
-    private var topEdgeDirection = 0// 0 means inside ,1 means outside
-    private var bottomEdgeDirection = 0// 0 means inside ,1 means outside
-    private var leftEdgeDirection = 0// 0 means inside ,1 means outside
-    private var rightEdgeDirection = 0// 0 means inside ,1 means outside
+    private var topEdgeDirectionSuper = 0// 0 means inside ,1 means outside
+    private var bottomEdgeDirectionSuper = 0// 0 means inside ,1 means outside
+    private var leftEdgeDirectionSuper = 0// 0 means inside ,1 means outside
+    private var rightEdgeDirectionSuper= 0// 0 means inside ,1 means outside
 
 
     init {
@@ -79,93 +79,93 @@ class SuperButton @JvmOverloads constructor(
                 R.styleable.SuperButton, 0, 0
             )
 
-        fillColor = attributeSet.getColor(
+        fillColorSuper = attributeSet.getColor(
             R.styleable.SuperButton_alex_fillColor,
             ContextCompat.getColor(
                 context,
                 R.color.colorPrimary
             )
         )
-        strokeColor = attributeSet.getColor(
+        strokeColorSuper = attributeSet.getColor(
             R.styleable.SuperButton_alex_strokeColor,
             ContextCompat.getColor(
                 context,
                 R.color.colorPrimary
             )
         )
-        strokeWidth = attributeSet.getFloat(R.styleable.SuperButton_alex_strokeWidth, 0f)
+        strokeWidthSuper = attributeSet.getFloat(R.styleable.SuperButton_alex_strokeWidth, 0f)
 
         //corner radius
-        bottomLeftCornerRadius =
+        bottomLeftCornerRadiusSuper =
             attributeSet.getFloat(R.styleable.SuperButton_alex_bottomLeftCornerRadius, 0f)
-        bottomRightCornerRadius =
+        bottomRightCornerRadiusSuper =
             attributeSet.getFloat(R.styleable.SuperButton_alex_bottomRightCornerRadius, 0f)
-        topLeftCornerRadius =
+        topLeftCornerRadiusSuper =
             attributeSet.getFloat(R.styleable.SuperButton_alex_topLeftCornerRadius, 0f)
-        topRightCornerRadius =
+        topRightCornerRadiusSuper =
             attributeSet.getFloat(R.styleable.SuperButton_alex_topRightCornerRadius, 0f)
 
         //corner family
-        bottomLeftCornerFamily =
+        bottomLeftCornerFamilySuper =
             attributeSet.getInt(
                 R.styleable.SuperButton_alex_bottomLeftCornerFamily,
                 Round
             )
-        bottomRightCornerFamily =
+        bottomRightCornerFamilySuper=
             attributeSet.getInt(
                 R.styleable.SuperButton_alex_bottomRightCornerFamily,
                 Round
             )
-        topLeftCornerFamily =
+        topLeftCornerFamilySuper =
             attributeSet.getInt(
                 R.styleable.SuperButton_alex_topLeftCornerFamily,
                 Round
             )
-        topRightCornerFamily =
+        topRightCornerFamilySuper =
             attributeSet.getInt(
                 R.styleable.SuperButton_alex_topRightCornerFamily,
                 Round
             )
 
         //shadow
-        shadowcolor =
+        shadowColorSuper =
             attributeSet.getColor(
                 R.styleable.SuperButton_alex_shadowColor, ContextCompat.getColor(
                     context,
                     R.color.colorPrimary
                 )
             )
-        shadowElevation =
+        shadowElevationSuper =
             attributeSet.getFloat(R.styleable.SuperButton_alex_shadowElevation, 0f)
 
 
         //edge
-        topEdgeRadius =
+        topEdgeRadiusSuper =
             attributeSet.getFloat(R.styleable.SuperButton_alex_topEdgeRadius, 0f)
-           bottomEdgeRadius =
+        bottomEdgeRadiusSuper =
             attributeSet.getFloat(R.styleable.SuperButton_alex_bottomEdgeRadius, 0f)
-           leftEdgeRadius =
+        leftEdgeRadiusSuper =
             attributeSet.getFloat(R.styleable.SuperButton_alex_leftEdgeRadius, 0f)
-           rightEdgeRadius=
+        rightEdgeRadiusSuper=
             attributeSet.getFloat(R.styleable.SuperButton_alex_rightEdgeRadius, 0f)
 
 
-        topEdgeDirection =
+        topEdgeDirectionSuper =
             attributeSet.getInt(
                 R.styleable.SuperButton_alex_topEdgeDirection,
                 Inside
             )
-        bottomEdgeDirection =
+        bottomEdgeDirectionSuper =
             attributeSet.getInt(
                 R.styleable.SuperButton_alex_bottomEdgeDirection,
                 Inside
             )
-        leftEdgeDirection =
+        leftEdgeDirectionSuper =
             attributeSet.getInt(
                 R.styleable.SuperButton_alex_leftEdgeDirection,
                 Inside
             )
-        rightEdgeDirection=
+        rightEdgeDirectionSuper=
             attributeSet.getInt(
                 R.styleable.SuperButton_alex_rightEdgeDirection,
                 Inside
@@ -173,30 +173,30 @@ class SuperButton @JvmOverloads constructor(
 
 
         val shapeAppearanceModel = ShapeAppearanceModel.Builder()
-            .setBottomLeftCorner(bottomLeftCornerFamily, bottomLeftCornerRadius)
-            .setBottomRightCorner(bottomRightCornerFamily, bottomRightCornerRadius)
-            .setTopLeftCorner(topLeftCornerFamily, topLeftCornerRadius)
-            .setTopRightCorner(topRightCornerFamily, topRightCornerRadius)
-            .setTopEdge(TriangleEdgeTreatment(topEdgeRadius,getBoolValueOfEdgeDirection(topEdgeDirection)))
-            .setBottomEdge(TriangleEdgeTreatment(bottomEdgeRadius,getBoolValueOfEdgeDirection(bottomEdgeDirection)))
-            .setLeftEdge(TriangleEdgeTreatment(leftEdgeRadius,getBoolValueOfEdgeDirection(leftEdgeDirection)))
-            .setRightEdge(TriangleEdgeTreatment(rightEdgeRadius,getBoolValueOfEdgeDirection(rightEdgeDirection)))
-        .build()
+            .setBottomLeftCorner(bottomLeftCornerFamilySuper, bottomLeftCornerRadiusSuper)
+            .setBottomRightCorner(bottomRightCornerFamilySuper, bottomRightCornerRadiusSuper)
+            .setTopLeftCorner(topLeftCornerFamilySuper, topLeftCornerRadiusSuper)
+            .setTopRightCorner(topRightCornerFamilySuper, topRightCornerRadiusSuper)
+            .setTopEdge(TriangleEdgeTreatment(topEdgeRadiusSuper,getBoolValueOfEdgeDirection(topEdgeDirectionSuper)))
+            .setBottomEdge(TriangleEdgeTreatment(bottomEdgeRadiusSuper,getBoolValueOfEdgeDirection(bottomEdgeDirectionSuper)))
+            .setLeftEdge(TriangleEdgeTreatment(leftEdgeRadiusSuper,getBoolValueOfEdgeDirection(leftEdgeDirectionSuper)))
+            .setRightEdge(TriangleEdgeTreatment(rightEdgeRadiusSuper,getBoolValueOfEdgeDirection(rightEdgeDirectionSuper)))
+            .build()
 
-        materialShapeDrawable = MaterialShapeDrawable(shapeAppearanceModel)
-        materialShapeDrawable.fillColor = ColorStateList.valueOf(fillColor)
-        materialShapeDrawable.strokeColor = ColorStateList.valueOf(strokeColor)
-        materialShapeDrawable.strokeWidth = strokeWidth
+        materialShapeDrawableSuper = MaterialShapeDrawable(shapeAppearanceModel)
+        materialShapeDrawableSuper.fillColor = ColorStateList.valueOf(fillColorSuper)
+        materialShapeDrawableSuper.strokeColor = ColorStateList.valueOf(strokeColorSuper)
+        materialShapeDrawableSuper.strokeWidth = strokeWidthSuper
 
-        materialShapeDrawable.elevation = shadowElevation
-        materialShapeDrawable.setShadowColor(shadowcolor)
+        materialShapeDrawableSuper.elevation = shadowElevationSuper
+        materialShapeDrawableSuper.setShadowColor(shadowColorSuper)
 
 
-        materialShapeDrawable.paintStyle = Paint.Style.FILL_AND_STROKE
-        materialShapeDrawable.shadowCompatibilityMode =
+        materialShapeDrawableSuper.paintStyle = Paint.Style.FILL_AND_STROKE
+        materialShapeDrawableSuper.shadowCompatibilityMode =
             MaterialShapeDrawable.SHADOW_COMPAT_MODE_ALWAYS
 
-        background = materialShapeDrawable
+        background = materialShapeDrawableSuper
 
     }
 
