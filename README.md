@@ -37,8 +37,8 @@ and be sure you have material
 
 ## How to use
 
-* First, add  ```xml  android:clipChildren="false" ``` to the parent layout to enable shadow appears 
-  
+* First, add   android:clipChildren="false" ``` to the parent layout to enable shadow appears 
+* your app theme should extent Theme.MaterialComponents theme, Like this :  ```xml <style name="AppTheme" parent="Theme.MaterialComponents.Light"> ``` Or you can add the theme directly to your layout parent like this:   ```xml android:theme="@style/Theme.MaterialComponents.Light" ```
 
 ```xml
     <alex.superbuttonlibrary.SuperButton
@@ -59,7 +59,15 @@ and be sure you have material
         app:alex_shadowElevation="@dimen/dimen_30"
         app:alex_strokeColor="@color/colorRed"  />
 ```
-
+* create file dimens.xml in values and put in it this code , And be careful , thrse is no <b>dp</b> here !
+```xml  
+<resources>
+    <dimen name="dimen_30">30</dimen>
+    <dimen name="dimen_15">15</dimen>
+    <dimen name="dimen_5">5</dimen>
+    <dimen name="dimen_2">2</dimen>
+</resources>
+```
   * Enjoy!
 
 
