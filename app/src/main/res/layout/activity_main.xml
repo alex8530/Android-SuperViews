@@ -41,6 +41,7 @@
         app:alex_topRightCornerFamily="Cut"
         app:alex_topRightCornerRadius="@dimen/dimen_30" />
 
+
     <alex.superlibrary.SuperView
         android:layout_width="200dp"
         android:layout_height="50dp"
@@ -189,4 +190,6 @@
             android:textStyle="bold" />
 
     </alex.superlibrary.SuperFrameLayout>
+ 
+
 </LinearLayout>

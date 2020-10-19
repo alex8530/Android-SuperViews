@@ -6,7 +6,7 @@ import android.content.res.ColorStateList
 import android.graphics.Paint
 import android.util.AttributeSet
 import android.view.View
-import android.widget.LinearLayout
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.MaterialShapeDrawable
@@ -16,11 +16,11 @@ import com.superlibrary.R
 
 
 @SuppressLint("RestrictedApi")
-class SuperLinearLayout @JvmOverloads constructor(
+class SuperConstraintLayout @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) : LinearLayout(context, attrs, defStyleAttr) {
+) : ConstraintLayout(context, attrs, defStyleAttr) {
 
     companion object {
         var Round = CornerFamily.ROUNDED
