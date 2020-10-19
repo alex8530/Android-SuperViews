@@ -44,7 +44,7 @@ allprojects {
 ```
 * In ``` build.gradle ``` (  app Level  )
 
-                      
+                         
                       
 Add library as dependency [![JitPack](https://jitpack.io/v/alex8530/Android-SuperViews.svg)](https://jitpack.io/#alex8530/Android-SuperViews)
 
