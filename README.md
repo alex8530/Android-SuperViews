@@ -2,13 +2,32 @@
 
 ## This library make these things : 
 
-- improve the Button , and add the possibility of changing these attributes :
-- corner form one side only or more, for example from top Left
+- improve the ViewGruops And Views Like (View,FrameLayout,LinearLayout,RelativeLayout,Button)  and add the possibility of changing these attributes :
+- corner form one side only or more 
 - change the radius of corner
-- the shadow color
-- the stroke color and stroke radius
+- change shadow color and shadow radius
+- change stroke color and stroke radius
 
+### The library offers the following classes
+- SuperButton 
+  - This class extend MaterialButton
+- SuperFrameLayout 
+  - This class extend FrameLayout
+- SuperLinearLayout 
+  - This class extend LinearLayout
+- SuperRelativeLayout 
+  - This class extend  RelativeLayout
+- SuperView 
+  - This class extend View
+
+## Example on Button
 ![Image Result](https://i.ibb.co/W21YsKS/Screenshot-2020-10-16-022754.png)
+
+## Exambple on All Views
+![Image Result](https://i.ibb.co/4Pj5Jvs/Screenshot-1603129757.png)
+
+
+
  
 
 ## Getting started
@@ -37,46 +56,55 @@ and be sure you have material
 
 ## How to use
 
-* First, add   android:clipChildren="false" ``` to the parent layout to enable shadow appears 
+* First, add  ```xml  android:clipChildren="false" ``` to the parent layout to enable shadow appears 
 * your app theme should extent Theme.MaterialComponents theme, Like this :  ```xml <style name="AppTheme" parent="Theme.MaterialComponents.Light"> ``` Or you can add the theme directly to your layout parent like this:   ```xml android:theme="@style/Theme.MaterialComponents.Light" ```
 
+
+## Example on Button , Note , All Other views are the same as button !
 ```xml
-    <alex.superbuttonlibrary.SuperButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_alex"
+     <alex.superlibrary.SuperButton
+        android:layout_width="200dp"
+        android:layout_height="50dp"
         android:padding="10dp"
-        app:alex_topRightCornerRadius="@dimen/dimen_30"
-        app:alex_topRightCornerFamily="Cut"
-        app:alex_topLeftCornerRadius="@dimen/dimen_30"
-        app:alex_topLeftCornerFamily="Round"
+        android:text="@string/button"
+        android:textAlignment="center"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        app:alex_bottomEdgeDirection="OutSide"
+        app:alex_bottomEdgeRadius="@dimen/dimen_30"
+        app:alex_bottomLeftCornerFamily="Round"
         app:alex_bottomLeftCornerRadius="@dimen/dimen_30"
-        app:alex_bottomLeftCornerFamily="Round|Cut"
-        app:alex_bottomRightCornerRadius="@dimen/dimen_30"
         app:alex_bottomRightCornerFamily="Cut"
+        app:alex_bottomRightCornerRadius="@dimen/dimen_30"
         app:alex_fillColor="@color/colorAccent"
+        app:alex_leftEdgeDirection="Inside"
+        app:alex_leftEdgeRadius="@dimen/dimen_30"
+        app:alex_rightEdgeDirection="Inside"
+        app:alex_rightEdgeRadius="@dimen/dimen_30"
         app:alex_shadowColor="@color/colorGreen"
         app:alex_shadowElevation="@dimen/dimen_30"
-        app:alex_strokeColor="@color/colorRed"  />
+        app:alex_strokeColor="@color/colorRed"
+        app:alex_strokeWidth="@dimen/dimen_5"
+        app:alex_topEdgeDirection="OutSide"
+        app:alex_topEdgeRadius="@dimen/dimen_30"
+        app:alex_topLeftCornerFamily="Round"
+        app:alex_topLeftCornerRadius="@dimen/dimen_30"
+        app:alex_topRightCornerFamily="Cut"
+        app:alex_topRightCornerRadius="@dimen/dimen_30" />
 ```
 * create file dimens.xml in values and put in it this code , And be careful , thrse is no <b>dp</b> here !
 ```xml  
 <resources>
+    <dimen name="dimen_0">0</dimen>
     <dimen name="dimen_30">30</dimen>
+    <dimen name="dimen_60">60</dimen>
     <dimen name="dimen_15">15</dimen>
     <dimen name="dimen_5">5</dimen>
     <dimen name="dimen_2">2</dimen>
 </resources>
 ```
   * Enjoy!
-
-
-## What are next ?
-* improve the  <b>CardView</b> and add the possibility of changing these attributes :  
- - corner form one side only or more, for example from top Left
- - change the radius of corner
- - the shadow color
- - the stroke color and stroke radius  
+ 
   
 ## License
 
