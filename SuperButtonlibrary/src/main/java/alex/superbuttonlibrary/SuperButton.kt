@@ -10,6 +10,7 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.shape.CornerFamily
 import com.google.android.material.shape.MaterialShapeDrawable
 import com.google.android.material.shape.ShapeAppearanceModel
+import com.google.android.material.shape.TriangleEdgeTreatment
 import com.superbuttonlibrary.R
 
 
@@ -18,23 +19,29 @@ class SuperButton @JvmOverloads constructor(
     context: Context,
     attrs: AttributeSet? = null,
     defStyleAttr: Int = 0
-) :  MaterialButton(context, attrs, defStyleAttr) {
+) : MaterialButton(context, attrs, defStyleAttr) {
 
     companion object {
         var Round = CornerFamily.ROUNDED
         var Cut = CornerFamily.CUT
+
+        var Inside =0
+        var OutSide =1
     }
 
     private var materialShapeDrawable: MaterialShapeDrawable
 
     private var shadowElevation = 0f
-    private var shadowcolor = ContextCompat.getColor(context,
+    private var shadowcolor = ContextCompat.getColor(
+        context,
         R.color.colorPrimary
     )
-    private var fillColor = ContextCompat.getColor(context,
+    private var fillColor = ContextCompat.getColor(
+        context,
         R.color.colorPrimary
     )
-    private var strokeColor = ContextCompat.getColor(context,
+    private var strokeColor = ContextCompat.getColor(
+        context,
         R.color.colorPrimary
     )
     private var strokeWidth = 0f
@@ -54,20 +61,35 @@ class SuperButton @JvmOverloads constructor(
         Round
 
 
+    private var topEdgeRadius = 0f
+    private var bottomEdgeRadius = 0f
+    private var leftEdgeRadius = 0f
+    private var rightEdgeRadius = 0f
+
+    private var topEdgeDirection = 0// 0 means inside ,1 means outside
+    private var bottomEdgeDirection = 0// 0 means inside ,1 means outside
+    private var leftEdgeDirection = 0// 0 means inside ,1 means outside
+    private var rightEdgeDirection = 0// 0 means inside ,1 means outside
+
+
     init {
         val attributeSet =
-            context.theme.obtainStyledAttributes(attrs,
-                R.styleable.SuperButton, 0, 0)
+            context.theme.obtainStyledAttributes(
+                attrs,
+                R.styleable.SuperButton, 0, 0
+            )
 
         fillColor = attributeSet.getColor(
             R.styleable.SuperButton_alex_fillColor,
-            ContextCompat.getColor(context,
+            ContextCompat.getColor(
+                context,
                 R.color.colorPrimary
             )
         )
         strokeColor = attributeSet.getColor(
             R.styleable.SuperButton_alex_strokeColor,
-            ContextCompat.getColor(context,
+            ContextCompat.getColor(
+                context,
                 R.color.colorPrimary
             )
         )
@@ -108,13 +130,46 @@ class SuperButton @JvmOverloads constructor(
         //shadow
         shadowcolor =
             attributeSet.getColor(
-                R.styleable.SuperButton_alex_shadowColor,  ContextCompat.getColor(context,
+                R.styleable.SuperButton_alex_shadowColor, ContextCompat.getColor(
+                    context,
                     R.color.colorPrimary
-                ))
+                )
+            )
         shadowElevation =
-            attributeSet.getFloat(R.styleable.SuperButton_alex_shadowElevation,  0f)
+            attributeSet.getFloat(R.styleable.SuperButton_alex_shadowElevation, 0f)
 
 
+        //edge
+        topEdgeRadius =
+            attributeSet.getFloat(R.styleable.SuperButton_alex_topEdgeRadius, 0f)
+           bottomEdgeRadius =
+            attributeSet.getFloat(R.styleable.SuperButton_alex_bottomEdgeRadius, 0f)
+           leftEdgeRadius =
+            attributeSet.getFloat(R.styleable.SuperButton_alex_leftEdgeRadius, 0f)
+           rightEdgeRadius=
+            attributeSet.getFloat(R.styleable.SuperButton_alex_rightEdgeRadius, 0f)
+
+
+        topEdgeDirection =
+            attributeSet.getInt(
+                R.styleable.SuperButton_alex_topEdgeDirection,
+                Inside
+            )
+        bottomEdgeDirection =
+            attributeSet.getInt(
+                R.styleable.SuperButton_alex_bottomEdgeDirection,
+                Inside
+            )
+        leftEdgeDirection =
+            attributeSet.getInt(
+                R.styleable.SuperButton_alex_leftEdgeDirection,
+                Inside
+            )
+        rightEdgeDirection=
+            attributeSet.getInt(
+                R.styleable.SuperButton_alex_rightEdgeDirection,
+                Inside
+            )
 
 
         val shapeAppearanceModel = ShapeAppearanceModel.Builder()
@@ -122,15 +177,19 @@ class SuperButton @JvmOverloads constructor(
             .setBottomRightCorner(bottomRightCornerFamily, bottomRightCornerRadius)
             .setTopLeftCorner(topLeftCornerFamily, topLeftCornerRadius)
             .setTopRightCorner(topRightCornerFamily, topRightCornerRadius)
-            .build()
+            .setTopEdge(TriangleEdgeTreatment(topEdgeRadius,getBoolValueOfEdgeDirection(topEdgeDirection)))
+            .setBottomEdge(TriangleEdgeTreatment(bottomEdgeRadius,getBoolValueOfEdgeDirection(bottomEdgeDirection)))
+            .setLeftEdge(TriangleEdgeTreatment(leftEdgeRadius,getBoolValueOfEdgeDirection(leftEdgeDirection)))
+            .setRightEdge(TriangleEdgeTreatment(rightEdgeRadius,getBoolValueOfEdgeDirection(rightEdgeDirection)))
+        .build()
 
         materialShapeDrawable = MaterialShapeDrawable(shapeAppearanceModel)
         materialShapeDrawable.fillColor = ColorStateList.valueOf(fillColor)
         materialShapeDrawable.strokeColor = ColorStateList.valueOf(strokeColor)
         materialShapeDrawable.strokeWidth = strokeWidth
 
-        materialShapeDrawable.elevation=shadowElevation
-        materialShapeDrawable.setShadowColor( shadowcolor)
+        materialShapeDrawable.elevation = shadowElevation
+        materialShapeDrawable.setShadowColor(shadowcolor)
 
 
         materialShapeDrawable.paintStyle = Paint.Style.FILL_AND_STROKE
@@ -138,6 +197,11 @@ class SuperButton @JvmOverloads constructor(
             MaterialShapeDrawable.SHADOW_COMPAT_MODE_ALWAYS
 
         background = materialShapeDrawable
+
+    }
+
+    private fun getBoolValueOfEdgeDirection(direction: Int): Boolean {
+        return direction == Inside
 
     }
 }

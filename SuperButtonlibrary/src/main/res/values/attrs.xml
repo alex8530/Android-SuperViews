@@ -38,6 +38,35 @@
 
 
 
+        <attr name="alex_topEdgeRadius" format="dimension"/>
+        <attr name="alex_topEdgeDirection" >
+            <flag name="Inside" value="0"/>
+            <flag name="OutSide" value="1"/>
+        </attr>
+
+
+        <attr name="alex_bottomEdgeRadius" format="dimension"/>
+        <attr name="alex_bottomEdgeDirection" >
+            <flag name="Inside" value="0"/>
+            <flag name="OutSide" value="1"/>
+        </attr>
+
+
+        <attr name="alex_rightEdgeRadius" format="dimension"/>
+        <attr name="alex_rightEdgeDirection" >
+            <flag name="Inside" value="0"/>
+            <flag name="OutSide" value="1"/>
+        </attr>
+
+
+        <attr name="alex_leftEdgeRadius" format="dimension"/>
+        <attr name="alex_leftEdgeDirection" >
+            <flag name="Inside" value="0"/>
+            <flag name="OutSide" value="1"/>
+        </attr>
+
+
+
     </declare-styleable>
 
 </resources>

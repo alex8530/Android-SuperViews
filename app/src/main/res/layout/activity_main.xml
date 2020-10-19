@@ -8,6 +8,7 @@
     android:clipChildren="false"
     android:gravity="center"
     android:clipToPadding="false"
+    android:theme="@style/Theme.MaterialComponents.Light"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -17,7 +18,7 @@
         android:layout_marginTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_alex"
+        android:text="@string/button"
         android:padding="10dp"
         app:alex_topRightCornerRadius="@dimen/dimen_30"
         app:alex_topRightCornerFamily="Cut"
@@ -30,6 +31,18 @@
         app:alex_fillColor="@color/colorAccent"
         app:alex_shadowColor="@color/colorGreen"
         app:alex_shadowElevation="@dimen/dimen_30"
+        app:alex_topEdgeRadius="@dimen/dimen_30"
+        app:alex_topEdgeDirection="OutSide"
+        app:alex_bottomEdgeRadius="@dimen/dimen_30"
+        app:alex_bottomEdgeDirection="OutSide"
+        app:alex_rightEdgeRadius="@dimen/dimen_30"
+        app:alex_rightEdgeDirection="Inside"
+        app:alex_leftEdgeRadius="@dimen/dimen_30"
+        app:alex_leftEdgeDirection="Inside"
         app:alex_strokeColor="@color/colorRed"  />
+
+
+
+
 
 </LinearLayout>
