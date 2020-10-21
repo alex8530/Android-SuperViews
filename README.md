@@ -49,7 +49,7 @@ allprojects {
 Add library as dependency [![JitPack](https://jitpack.io/v/alex8530/Android-SuperViews.svg)](https://jitpack.io/#alex8530/Android-SuperViews)
 
 ```
-   implementation 'com.github.alex8530:Android-SuperButton:Tag'
+   implementation 'com.github.alex8530:Android-SuperButton:1.0.3'
 ```
 and be sure you have material
 ```
@@ -64,6 +64,7 @@ and be sure you have material
 Doing an app-wide migration by changing your app theme to inherit from a Material Components theme is the recommended approach
 
 Here are the Material Components themes : 
+
 ```xml
 Theme.MaterialComponents
 Theme.MaterialComponents.NoActionBar
@@ -74,8 +75,8 @@ Theme.MaterialComponents.DayNight
 Theme.MaterialComponents.DayNight.NoActionBar
 Theme.MaterialComponents.DayNight.DarkActionBar
  ```
-
-    * your app theme <b>should</b> extent one of them,For example  Like this :  ```xml <style name="AppTheme" parent="Theme.MaterialComponents.Light"> ``` Or you can add the         theme   directly to your layout parent like this:   ```xml android:theme="@style/Theme.MaterialComponents.Light" ``` 
+ 
+- your app theme  <b> should </b>  extent one of them,For example  Like this :  ```xml <style name="AppTheme" parent="Theme.MaterialComponents.Light"> ``` Or you can add the         theme   directly to your layout parent like this:   ```xml android:theme="@style/Theme.MaterialComponents.Light" ``` 
 
 ## Note:
 Note: If you can't change your theme, you can do one of the following:
