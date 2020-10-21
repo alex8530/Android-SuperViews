@@ -95,8 +95,8 @@ Note: If you can't change your theme, you can do one of the following:
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-   <b>  android:clipChildren="false" </b>
-   <b> android:clipToPadding="false" </b>
+    android:clipChildren="false"  
+    android:clipToPadding="false"  
     tools:context=".MainActivity">
   
      <alex.superlibrary.SuperButton
@@ -130,6 +130,10 @@ Note: If you can't change your theme, you can do one of the following:
         app:alex_topRightCornerRadius="@dimen/dimen_30" />
 </LinearLayout>
 ```
+### Note:
+* Be sure that you put this android:clipChildren="false"  in the layout  
+
+
 * create file dimens.xml in values and put in it this code , And be careful , thrse is no <b>dp</b> here !
 ```xml  
 <resources>
