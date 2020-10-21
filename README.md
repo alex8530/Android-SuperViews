@@ -49,7 +49,7 @@ allprojects {
 Add library as dependency [![JitPack](https://jitpack.io/v/alex8530/Android-SuperViews.svg)](https://jitpack.io/#alex8530/Android-SuperViews)
 
 ```
-   implementation 'com.github.alex8530:Android-SuperButton:1.0.3'
+   implementation 'com.github.alex8530:Android-SuperButton:1.0.4'
 ```
 and be sure you have material
 ```
