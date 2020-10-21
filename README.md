@@ -131,7 +131,7 @@ Note: If you can't change your theme, you can do one of the following:
 </LinearLayout>
 ```
 ### Note:
-* Be sure that you put this android:clipChildren="false"  in the layout  
+* Be sure that you put this ```xml   android:clipChildren="false" '''  in the layout  
 
 
 * create file dimens.xml in values and put in it this code , And be careful , thrse is no <b>dp</b> here !
