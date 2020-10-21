@@ -57,14 +57,47 @@ and be sure you have material
 ```
    
 
-## How to use
+## How to use , Very Important !
 
 * First, add  ```xml  android:clipChildren="false" ``` to the parent layout to enable shadow appears 
-* your app theme should extent Theme.MaterialComponents theme, Like this :  ```xml <style name="AppTheme" parent="Theme.MaterialComponents.Light"> ``` Or you can add the theme directly to your layout parent like this:   ```xml android:theme="@style/Theme.MaterialComponents.Light" ```
+* Change your app theme to inherit from a Material Components theme 
+Doing an app-wide migration by changing your app theme to inherit from a Material Components theme is the recommended approach
 
+Here are the Material Components themes : 
+```xml
+Theme.MaterialComponents
+Theme.MaterialComponents.NoActionBar
+Theme.MaterialComponents.Light
+Theme.MaterialComponents.Light.NoActionBar
+Theme.MaterialComponents.Light.DarkActionBar
+Theme.MaterialComponents.DayNight
+Theme.MaterialComponents.DayNight.NoActionBar
+Theme.MaterialComponents.DayNight.DarkActionBar
+ ```
+
+    * your app theme <b>should</b> extent one of them,For example  Like this :  ```xml <style name="AppTheme" parent="Theme.MaterialComponents.Light"> ``` Or you can add the         theme   directly to your layout parent like this:   ```xml android:theme="@style/Theme.MaterialComponents.Light" ``` 
+
+## Note:
+Note: If you can't change your theme, you can do one of the following:
+
+
+- Inherit from one of  Material Components Bridge themes. [See the Bridge Themes section](https://gist.github.com/alex8530/8236423e4cf4f417d5170b2c8beab0ed)
+  for more details.
+  
+
+- Continue to inherit from an AppCompat theme and add some new theme attributes to your theme. [See the App Compat Themes section](https://gist.github.com/alex8530/d68732b122455447ea47752d5a85bbd2) for more details.
 
 ## Example on Button , Note , All Other views are the same as button !
 ```xml
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   <b>  android:clipChildren="false" </b>
+   <b> android:clipToPadding="false" </b>
+    tools:context=".MainActivity">
+  
      <alex.superlibrary.SuperButton
         android:layout_width="200dp"
         android:layout_height="50dp"
@@ -94,6 +127,7 @@ and be sure you have material
         app:alex_topLeftCornerRadius="@dimen/dimen_30"
         app:alex_topRightCornerFamily="Cut"
         app:alex_topRightCornerRadius="@dimen/dimen_30" />
+</LinearLayout>
 ```
 * create file dimens.xml in values and put in it this code , And be careful , thrse is no <b>dp</b> here !
 ```xml  
